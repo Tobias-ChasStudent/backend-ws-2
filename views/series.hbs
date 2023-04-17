@@ -1,0 +1,21 @@
+<header>
+    <h1>Series</h1>
+</header>
+<nav>
+    <a href="/">Home</a>
+    <a href="/series">Series</a>
+    <a href="/todo-list">Todo list</a>
+</nav>
+<main>
+    <a href="new-series" class="btn">Add a series</a>
+    {{#each movies}}
+    <article>
+        <h2>
+            {{this.title}} 
+            <a href="/series/{{this._id}}"><img src="/icons/edit.png" alt="" class="edit"></a>
+        </h2>
+        <h4>{{this.rating}}</h4>
+        <p>{{this.desc}}</p>
+    </article>
+    {{/each}}
+</main>

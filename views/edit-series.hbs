@@ -1,0 +1,24 @@
+<header>
+    <h1>Edit a Series</s></h1>
+</header>
+<nav>
+    <a href="/">Home</a>
+    <a href="/series">Series</a>
+    <a href="/todo-list">Todo list</a>
+</nav>
+<main>
+    <form action="/edit-series/{{selectedSeries._id}}" method="post">
+        <input type="text" name="title" placeholder="Title" value="{{selectedSeries.title}}" ><br>
+
+        <textarea name="desc" placeholder="Description"  id="" cols="30" rows="10">
+            {{selectedSeries.desc}}
+        </textarea> <br>
+
+        <input type="text" name="rating" placeholder="Rating" value="{{selectedSeries.rating}}" > <br>
+
+        <input type="submit" value="Submit" class="btn">
+    </form>
+    <form action="/delete-series/{{selectedSeries._id}}" method="post">
+        <input type="submit" value="Delete" class="btn delete-btn">
+    </form>
+</main>
